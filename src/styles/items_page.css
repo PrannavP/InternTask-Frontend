@@ -1,0 +1,107 @@
+.items-page-main-container {
+    padding: 20px;
+    margin-left: 220px;
+}
+
+.items-page-main-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #343a40;
+}
+
+.employee-selection-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.employee-name-dropdown-container select,
+.input-date-container input[type="date"] {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Table Styles */
+.employee-items-form-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.employee-items-form-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.employee-items-form-container th,
+.employee-items-form-container td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.employee-items-form-container th {
+    background-color: #f1f1f1;
+    color: #495057;
+    font-weight: 600;
+}
+
+/* Select inside table */
+.employee-items-form-container select {
+    width: 100%;
+    padding: 8px;
+}
+
+/* Input inside table */
+.employee-items-form-container input[type="number"] {
+    width: 60px;
+    padding: 6px;
+}
+
+/* Buttons */
+button {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button[onClick*="delete"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+button[onClick*="add"] {
+    background-color: #007bff;
+    color: white;
+}
+
+.save-button-container button {
+    color: white;
+    font-weight: 600;
+    width: 200px;
+}
+
+.delete-icon-span{
+    cursor: pointer;
+}

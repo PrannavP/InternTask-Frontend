@@ -1,0 +1,83 @@
+.attendance-page-main-container{
+    margin-left: 300px;
+}
+
+/* Container for the entire form */
+.AttendanceForm-Container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Dropdown container styling */
+.dropdown-container {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.dropdown-container label {
+    font-weight: bold;
+    color: #333;
+}
+
+.dropdown {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.save-button-container{
+    display: inline-block;
+}
+
+.save-button-container button{
+    background-color: #007bff !important;
+    height: 30px;
+}
+
+.save-button-container button{
+    width: 150px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Table container */
+.employees-attendance-table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+/* Table styling */
+.attendance-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-table th,
+.attendance-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.attendance-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.current-date {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}

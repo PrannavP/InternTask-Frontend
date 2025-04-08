@@ -1,0 +1,56 @@
+.employees-list-page {
+    margin-left: 300px; /* Matches the width of the sidebar */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+.employee-list-page-header {
+    text-align: center;
+    color: #333;
+}
+
+.employees-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.employees-table th,
+.employees-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.employees-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.edit-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+.no-employees {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+}
