@@ -1,7 +1,8 @@
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 import "../styles/admin_login.css"
 
@@ -16,24 +17,52 @@ const validationSchema = Yup.object({
 });
 
 const AdminLoginPage = () => {
-    const navigate = useNavigate();
-    
+    const loginSuccessNotify = () => toast.success("Login Success", {
+        position: "top-right",
+        autoClose: 3000,
+        closeOnClick: true,
+        theme: "light"
+    });
+
+    const errorNotify = () => toast.error("Error while logging in", {
+        position: "top-right",
+        autoClose: 3000,
+        closeOnClick: true,
+        theme: "light"
+    });
+
     const loginAdmin = async(values) => {
         try{
             const response = await axios.post("http://localhost:5147/api/Admin/Login", values);
             if(response.status === 200){
                 localStorage.setItem("token", response.data.token);
-                console.log("ok logged in");
-                navigate("/");
-                console.log("navigating to /");
+
+                // show success toast message
+
+                loginSuccessNotify();
+
+                setTimeout(() => {
+                    // go to employees page initially
+                    window.location.href = "/employees";
+                }, 2500);
             }
         }catch(err){
+            errorNotify();
             console.log(err);
         }
     };
 
     return(
         <div className="admin-login-form-container">
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                newestOnTop={true}
+                closeOnClick={true}
+                rtl={false}
+                theme="light"
+            />
+
             <h2 className="admin-login-header">Admin Login</h2>
 
             <Formik

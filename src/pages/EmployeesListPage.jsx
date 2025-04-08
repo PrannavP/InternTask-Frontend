@@ -1,12 +1,30 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 import SideNavBarComponent from "../components/SideNavBarComponent";
 import "../styles/employee_page.css";
 
 const EmployeesListPage = () => {
     const [employees, setEmployees] = useState([]); // initially empty array
+    const navigate = useNavigate();
+
+    const deleteNotifyNotify = () => toast.success("Employee Deleted", {
+        position: "top-right",
+        autoClose: 2000,
+        closeOnClick: true,
+        theme: "light"
+    });
+
+    const errorNotify = () => toast.error("Something went wrong while deleting!", {
+        position: "top-right",
+        autoClose: 2000,
+        closeOnClick: true,
+        theme: "light"
+    });
 
     useEffect(() => {
         const fetchAllEmployees = async () => {
@@ -23,13 +41,16 @@ const EmployeesListPage = () => {
 
     const deleteEmployee = async(id) => {
         try{
-            console.log(id);
             const deleteEmployeeApiCall = await axios.delete(`http://localhost:5147/api/Employee/DeleteEmployee/${id}`);
-            console.log(deleteEmployeeApiCall);
-            console.log("Employee deleted successfully");
-            window.location.reload();
+
+            deleteNotifyNotify();
+
+            setTimeout(() => {
+                window.location.reload();
+            }, 2000);
         }catch(err){
-            console.log("Something went wrong while deleting employee!", err);
+            errorNotify();
+            console.error(err);
         }
     };
 
@@ -37,7 +58,21 @@ const EmployeesListPage = () => {
         <>
         <SideNavBarComponent />
         <div className="employees-list-page">
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                newestOnTop={true}
+                closeOnClick={true}
+                rtl={false}
+                theme="light"
+            />
+            
             <h1 className="employee-list-page-header">Employees List</h1>
+
+            <div className="create-new-employee-button-container">
+                <button onClick={() => navigate("/create-employee")}>Create New Employee</button>
+            </div>
+
             {employees.length > 0 ? (
                 <table className="employees-table">
                     <thead>

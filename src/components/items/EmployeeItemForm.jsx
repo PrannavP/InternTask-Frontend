@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { RiAddLargeLine } from "react-icons/ri";
 
 const EmployeeItemForm = ({ selectedEmployee, selectedDate }) => {
     const successNotify = () => toast.success("Employee Items Added", {
@@ -153,8 +154,10 @@ const EmployeeItemForm = ({ selectedEmployee, selectedDate }) => {
                 </tbody>
             </table>
 
-            <div style={{ textAlign: "center", marginTop: "10px" }}>
-                <button onClick={addItem}>Add Item</button>
+            <div style={{ textAlign: "center", marginTop: "25px" }}>
+                <span className="add-icon-span" onClick={addItem}>
+                    <RiAddLargeLine /><span>Add Item</span>
+                </span>
             </div>
 
             <center>

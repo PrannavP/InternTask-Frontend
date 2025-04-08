@@ -30,12 +30,6 @@ const App = () => {
                         }
                     />
                     <Route
-                        path="/"
-                        element={
-                            admin ? <DashboardPage /> : <Navigate to="/login" />
-                        }
-                    />
-                    <Route
                         path="/employees"
                         element={
                         admin ? <EmployeesListPage /> : <Navigate to="/login" />

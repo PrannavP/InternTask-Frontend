@@ -1,6 +1,8 @@
 .create-employee-form-container {
-    max-width: 500px;
-    margin: 50px auto;
+    max-width: 100%;
+    margin-left: 21%;
+    margin-right: 2%;
+    margin-top: 2%;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;

@@ -41,3 +41,12 @@
 .sidenav-link:hover {
     background-color: #575757;
 }
+
+.side-nav-bar-logout-button-container{
+    margin-top: 190%;
+}
+
+.side-nav-bar-logout-button-container button{
+    width: 200px;
+    margin-left: 20px;
+}

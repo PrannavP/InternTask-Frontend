@@ -1,16 +1,13 @@
-import { useNavigate } from "react-router-dom";
-
 import SideNavBarComponent from "../components/SideNavBarComponent";
 
 import "../styles/dashboard.css";
 
 const DashboardPage = () => {
-    const navigate = useNavigate();
-
     const logoutHandler = () => {
         localStorage.removeItem("token");
+
         // redirect to login page
-        navigate("/login");
+        window.location.href = "/login";
     };
 
     return (

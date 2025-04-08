@@ -75,25 +75,10 @@ button {
     border-radius: 6px;
     font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
 }
 
-button:hover {
-    opacity: 0.9;
-}
-
-button:active {
-    transform: scale(0.98);
-}
-
-button[onClick*="delete"] {
-    background-color: #dc3545;
-    color: white;
-}
-
-button[onClick*="add"] {
-    background-color: #007bff;
-    color: white;
+.save-button-container{
+    margin-top: 20px;
 }
 
 .save-button-container button {
@@ -103,5 +88,9 @@ button[onClick*="add"] {
 }
 
 .delete-icon-span{
+    cursor: pointer;
+}
+
+.add-icon-span{
     cursor: pointer;
 }
