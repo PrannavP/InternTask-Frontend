@@ -103,8 +103,12 @@ const AttendanceForm = () => {
         }
     };
 
+
+    // whenever the checbox is checked this function is called.
+    // this
     const handleCheckboxChange = (employeeId, date) => {
         setAttendance(prev => {
+            console.log
             const key = `${employeeId}_${date}`;
             return {
                 ...prev,

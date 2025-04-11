@@ -9,7 +9,7 @@ const EmployeeDropdown = ({ selectedEmployee, setSelectedEmployee, selectedDate,
             try {
                 const response = await axios.get("http://localhost:5147/api/employee/GetEmployeesNameAndId");
                 setEmployeesData(response.data);
-                console.log(response.data);
+                // console.log(response.data);
             } catch (err) {
                 console.error(err);
             }

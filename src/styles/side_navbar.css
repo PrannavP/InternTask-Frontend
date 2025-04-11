@@ -43,10 +43,30 @@
 }
 
 .side-nav-bar-logout-button-container{
-    margin-top: 190%;
+    margin-top: 165%;
 }
 
 .side-nav-bar-logout-button-container button{
     width: 200px;
     margin-left: 20px;
+}
+
+/* Style for sublinks */
+.sidenav-sublinks {
+    list-style: none;
+    padding-left: 20px; /* Indent sublinks */
+    margin-top: 5px;
+}
+
+.sidenav-sublink {
+    display: block;
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.sidenav-sublink:hover {
+    color: #007bff;
+    text-decoration: underline;
 }

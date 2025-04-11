@@ -1,0 +1,59 @@
+.items-list-page-main-container{
+    margin-left: 20%;
+}
+
+/* Container styling */
+.purchased-items-list-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+/* Heading styling */
+.purchased-items-list-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table styling */
+.purchased-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.purchased-items-table th,
+.purchased-items-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.purchased-items-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #333;
+}
+
+.purchased-items-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.purchased-items-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.purchased-items-table td {
+    color: #555;
+}
+
+.remaining-qty {
+    margin-left: 10px;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 14px;
+}

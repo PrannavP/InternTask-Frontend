@@ -1,0 +1,54 @@
+.update-assigned-item-container {
+
+  max-width: 800px;
+  margin-left: 20%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #4a90e2;
+  background-color: #fff;
+}
+
+textarea.form-input {
+  height: 120px;
+  resize: vertical;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
